@@ -10,6 +10,17 @@
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "incremental": true
+    "incremental": true,
+    "paths": {
+      "@root/*": ["./src/*"],
+      "@api/*": ["./src/api/*"],
+      "@entity/*": ["./src/entity/*"],
+      "@repository/*": ["./src/repository/*"],
+      "@libs/*": ["./src/libs/*"],
+      "@modules/*": ["./src/modules/*"],
+      "@handlers/*": ["./src/handlers/*"],
+      "@exception": ["./src/exceptions/exception.application.ts"],
+      "@interfaces/*": ["./src/interfaces/*"]
+    }
   }
 }
