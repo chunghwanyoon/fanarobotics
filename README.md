@@ -2,6 +2,8 @@
 
 - `npm ~> 6.14.x`
 - `node ~> 14.17.0`
+- [Discord.js](https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=destroy)
+- [Discord Developer Portal](https://discord.com/developers/docs/intro)
 
 # 환경변수
 
