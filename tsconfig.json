@@ -16,10 +16,10 @@
       "@api/*": ["./src/api/*"],
       "@entity/*": ["./src/entity/*"],
       "@repository/*": ["./src/repository/*"],
-      "@libs/*": ["./src/libs/*"],
+      "@libs/*": ["./src/api/libs/*"],
       "@modules/*": ["./src/modules/*"],
       "@handlers/*": ["./src/handlers/*"],
-      "@exception": ["./src/exceptions/exception.application.ts"],
+      "@exception": ["./src/libs/fana/fana.exception.ts"],
       "@interfaces/*": ["./src/interfaces/*"]
     }
   }
