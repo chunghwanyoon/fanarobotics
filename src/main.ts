@@ -7,10 +7,12 @@ import { RoboticsAPIBase } from '@api/base';
 /* For TYPEORM Transactions */
 import 'reflect-metadata';
 import { initializeTransactionalContext } from 'typeorm-transactional-cls-hooked';
+/* For bots */
+import { FanaRobotics } from '@libs/bots/fana.robotics';
 
 async function bootstrap() {
   const SWAGGER_API_PREFIX = '/api/v1';
-  const HOST_PORT = process.env.HOST_PORT ? process.env.HOST_PORT : 7000;
+  const HOST_PORT = process.env.HOST_PORT ? process.env.HOST_PORT : 3000;
   const NODE_ENV = process.env.NODE_ENV === 'production' ? true : false;
 
   /* Initialize TYPEORM cls-hooked */
@@ -34,8 +36,10 @@ async function bootstrap() {
   /* transform: true let JSON payload to Javascript object */
   app.useGlobalPipes(new ValidationPipe({ disableErrorMessages: NODE_ENV, transform: true }));
 
-  /* For API server port */
+  /* FIXME: should set DISCORD_BOT_TOKEN */
+  new FanaRobotics('${BOT_NAME}', '${DISCORD_BOT_TOKEN}').on_message();
 
+  /* For API server port */
   await app.listen(HOST_PORT);
 }
 
