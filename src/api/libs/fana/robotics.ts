@@ -21,7 +21,6 @@ export abstract class Robotics {
   }
 
   async activate() {
-    /* initialize client per bot */
     this.client.login(this.token).then(() => {
       this.ready();
     });
